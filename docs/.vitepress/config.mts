@@ -7,6 +7,7 @@ export default withMermaid({
   description: "基于图像识别的自动化黑盒测试框架",
   lang: "zh-cn",
   head: [["link", { rel: "icon", href: "/maafw.png" }]],
+  base: "/MaaFrameworkDocsWebsiteVite/",
   locales,
   themeConfig: {
     logo: "/maafw.png",
