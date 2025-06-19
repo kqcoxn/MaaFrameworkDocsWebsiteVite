@@ -11,10 +11,11 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /doc/1.1-QuickStarted
+      link: /application/1.1-QuickStarted
     - theme: alt
       text: GitHub
       link: https://github.com/MaaXYZ/MaaFramework
+
 features:
   - title: 简单易用
     details: 通过简单的 JSON 配置即可实现自动化流程，无需编程基础，新手也能快速上手。
