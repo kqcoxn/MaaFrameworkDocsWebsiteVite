@@ -8,7 +8,7 @@ hero:
   actions:
     - theme: brand
       text: Quick Start
-      link: /en/doc/1.1-QuickStarted
+      link: /en/application/1.1-QuickStarted
     - theme: alt
       text: GitHub
       link: https://github.com/MaaXYZ/MaaFramework
