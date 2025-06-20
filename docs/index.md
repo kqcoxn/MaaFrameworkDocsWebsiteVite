@@ -8,6 +8,7 @@ hero:
   image:
     src: /maafw.png
     alt: Logo
+    width: 240px
   actions:
     - theme: brand
       text: 快速开始
