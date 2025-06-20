@@ -3,8 +3,8 @@ layout: home
 
 hero:
   name: MaaFramework
-  text:
-  tagline: ✨ An automation black-box testing framework based on image recognition ✨
+  text: An automation black-box testing framework based on image recognition
+  tagline: Empowering developers to easily write better black-box test programs.
   actions:
     - theme: brand
       text: Quick Start

@@ -3,12 +3,12 @@ layout: home
 
 hero:
   name: MaaFramework
-  text:
-  tagline: ✨ 基于图像识别的自动化黑盒测试框架 ✨
+  text: 基于图像识别的自动化黑盒测试框架
+  tagline: 助力开发者轻松编写出更好的黑盒测试程序
   image:
     src: /maafw.png
     alt: Logo
-    width: 240px
+    # width: 280px
   actions:
     - theme: brand
       text: 快速开始
