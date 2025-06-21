@@ -12,3 +12,40 @@
   );
   --vp-home-hero-image-filter: blur(56px);
 }
+
+@media (min-width: 960px) {
+  .VPHero .image {
+    transform: translateX(10%);
+  }
+}
+
+.maa-title {
+  margin-bottom: 28px;
+  text-align: center;
+}
+
+.maa-center {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.maa-content {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.maa-project-list {
+  margin: 0 auto;
+  margin-top: 24px;
+  width: 80%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 906px) {
+  .maa-project-list {
+    width: 70%;
+    grid-template-columns: 1fr;
+  }
+}
