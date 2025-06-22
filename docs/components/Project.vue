@@ -19,6 +19,17 @@
   );
   cursor: pointer;
 
+  html.dark & {
+    background: rgba(17, 24, 39, 0.7); // 深色背景
+    background-image: linear-gradient(
+      135deg,
+      rgba(#47caff, 0.05) 50%,
+      rgba(#bd34fe, 0.03) 100%
+    );
+    box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.3),
+      0 1.5px 8px 0 rgba(0, 0, 0, 0.2);
+  }
+
   &:hover {
     box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.18),
       0 3px 16px 0 rgba(0, 0, 0, 0.12);
@@ -29,6 +40,16 @@
       rgba(#bd34fe, 0.04) 100%
     );
 
+    html.dark & {
+      background-image: linear-gradient(
+        135deg,
+        rgba(#47caff, 0.03) 50%,
+        rgba(#bd34fe, 0.02) 100%
+      );
+      box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.4),
+        0 3px 16px 0 rgba(0, 0, 0, 0.3);
+    }
+
     .logo {
       img {
         transform: scale(1.13) rotate(-6deg);
@@ -38,6 +59,14 @@
 
   &:active {
     transform: scale(0.98);
+  }
+
+  .alink {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
   }
 
   .head {
@@ -75,6 +104,10 @@
         letter-spacing: 0.5px;
         color: #222e3a;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+        html.dark & {
+          color: #e0e7ff; // 浅色文字
+        }
       }
 
       .stack {
@@ -132,6 +165,10 @@
     letter-spacing: 0.1px;
     text-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
     transition: color 0.2s;
+
+    html.dark & {
+      color: #b0bac9; // 浅色描述文字
+    }
   }
 
   .link {
@@ -150,6 +187,12 @@
     &:hover {
       transform: rotate(-18deg) scale(1.18);
       filter: brightness(1.2) drop-shadow(0 2px 6px #7ed0ff88);
+    }
+
+    html.dark & {
+      img {
+        filter: brightness(0) invert(1);
+      }
     }
   }
 }
@@ -185,6 +228,10 @@
         letter-spacing: 0.5px;
         color: #222e3a;
         text-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+
+        html.dark & {
+          color: #e0e7ff; // 浅色文字
+        }
       }
 
       .stack {
@@ -231,7 +278,8 @@
 </style>
 
 <template>
-  <div class="project" @click="Router.open(link)">
+  <div class="project">
+    <a class="alink" :href="link"></a>
     <div class="head">
       <div class="logo">
         <img :src="logo" />
@@ -253,7 +301,7 @@
       </div>
     </div>
     <div class="desc">{{ desc }}</div>
-    <div class="link">
+    <div class="link" @click="Router.open(link, false)">
       <img :src="icons.Share" />
     </div>
     <div class="phone" style="display: none">
