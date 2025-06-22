@@ -4,8 +4,7 @@ export const zhSidebar = [
     items: [
       { text: "快速开始", link: "/application/1.1-QuickStarted" },
       { text: "术语", link: "/application/1.2-ExplanationOfTerms" },
-      { text: "集成文档", link: "/application/2.1-Integration" },
-      { text: "回调协议", link: "/application/2.2-CallbackProtocol" },
+      { text: "回调协议", link: "/application/2.1-CallbackProtocol" },
       {
         text: "任务流水线（Pipeline）协议",
         link: "/application/3.1-PipelineProtocol",
@@ -18,17 +17,11 @@ export const zhSidebar = [
   },
   {
     text: "Binding接口",
+    link: "/binding",
     items: [
       {
         text: "NodeJS",
-        items: [
-          { text: "快速开始", link: "/binding/NodeJS/J1.1-快速开始" },
-          {
-            text: "自定义识别/操作",
-            link: "/binding/NodeJS/J1.2-自定义识别_操作",
-          },
-          { text: "打包", link: "/binding/NodeJS/J1.3-打包" },
-        ],
+        link: "/binding/NodeJS/J1.1-快速开始",
       },
     ],
   },
@@ -50,10 +43,9 @@ export const enSidebar = [
     items: [
       { text: "Quick Start", link: "/en/application/1.1-QuickStarted" },
       { text: "Terms", link: "/en/application/1.2-ExplanationOfTerms" },
-      { text: "Integration", link: "/en/application/2.1-Integration" },
       {
         text: "Callback Protocol",
-        link: "/en/application/2.2-CallbackProtocol",
+        link: "/en/application/2.1-CallbackProtocol",
       },
       {
         text: "Pipeline Protocol",
@@ -67,6 +59,7 @@ export const enSidebar = [
   },
   {
     text: "Binding Interface",
+    link: "/en/binding",
     items: [
       {
         text: "NodeJS",
@@ -82,7 +75,7 @@ export const enSidebar = [
     ],
   },
   {
-    text: "How to build",
+    text: "Framework Dev",
     items: [
       { text: "How to Build", link: "/en/framework/4.1-BuildGuide" },
       {
