@@ -20,32 +20,30 @@
 }
 
 .maa-title {
-  margin-bottom: 28px;
+  margin-top: 100px !important;
+  margin-bottom: 32px !important;
   text-align: center;
-}
-
-.maa-center {
-  text-align: center;
-  margin: 0 auto;
-}
-
-.maa-content {
-  margin: 0 auto;
-  width: 70%;
 }
 
 .maa-project-list {
   margin: 0 auto;
   margin-top: 24px;
-  width: 80%;
+  width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
-@media (max-width: 906px) {
+@media (max-width: 1300px) {
+  .maa-project-list {
+    width: 90%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 934px) {
   .maa-project-list {
     width: 70%;
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(1, 1fr);
   }
 }

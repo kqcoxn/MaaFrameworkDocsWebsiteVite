@@ -28,6 +28,12 @@
       rgba(#47caff, 0.06) 50%,
       rgba(#bd34fe, 0.04) 100%
     );
+
+    .logo {
+      img {
+        transform: scale(1.13) rotate(-6deg);
+      }
+    }
   }
 
   &:active {
@@ -135,13 +141,90 @@
     top: 26px;
     cursor: pointer;
     transition: transform 0.35s cubic-bezier(0.4, 2, 0.6, 1), filter 0.22s;
+
     img {
       width: 100%;
       transition: filter 0.22s;
     }
+
     &:hover {
       transform: rotate(-18deg) scale(1.18);
       filter: brightness(1.2) drop-shadow(0 2px 6px #7ed0ff88);
+    }
+  }
+}
+
+@media (max-width: 580px) {
+  .project {
+    .head {
+      .logo {
+        margin: 0 auto;
+      }
+
+      .right {
+        display: none;
+      }
+    }
+
+    .desc {
+      display: none;
+    }
+
+    .link {
+      display: none;
+    }
+
+    .phone {
+      display: flow-root !important;
+
+      .title {
+        text-align: center;
+        margin-top: 12px;
+        font-size: 20px;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+        color: #222e3a;
+        text-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+      }
+
+      .stack {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .stack-item {
+          margin-top: 8px;
+          height: 28px;
+          padding: 2px 12px;
+          border-radius: 50px;
+          box-shadow: 0 0 6px rgba(0, 0, 0, 0.18);
+          display: flex;
+          align-items: center;
+          opacity: 0.92;
+          cursor: pointer;
+          transition: transform 0.22s cubic-bezier(0.4, 2, 0.6, 1),
+            box-shadow 0.22s, opacity 0.22s;
+
+          .icon {
+            height: 18px;
+            width: 18px;
+
+            img {
+              height: 100%;
+            }
+          }
+
+          .label {
+            margin: 0 6px;
+            color: white;
+            font-size: 13px;
+            font-weight: bold;
+            letter-spacing: 0.2px;
+            text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+          }
+        }
+      }
     }
   }
 }
@@ -172,6 +255,21 @@
     <div class="desc">{{ desc }}</div>
     <div class="link">
       <img :src="icons.Share" />
+    </div>
+    <div class="phone" style="display: none">
+      <div class="title">{{ title }}</div>
+      <div class="stack">
+        <div
+          v-for="item in stack"
+          class="stack-item"
+          :style="{ backgroundColor: badges[item].bgColor }"
+        >
+          <div class="icon">
+            <img :src="badges[item].icon" />
+          </div>
+          <div class="label">{{ badges[item].label }}</div>
+        </div>
+      </div>
     </div>
   </div>
 </template>
