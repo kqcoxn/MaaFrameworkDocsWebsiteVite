@@ -35,7 +35,7 @@ features:
 
   <script setup>
     import Project from "./components/Project.vue"
-    import projects from "./assets/data/projects.ts"
+    import { projects } from "./assets/data/projects.ts"
   </script>
 
   <Project v-for="project in projects" :title="project.name" :desc="project.desc" :logo="project.logo" :stack="project.stack" :link="project.link" />

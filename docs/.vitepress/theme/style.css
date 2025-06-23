@@ -43,6 +43,10 @@ input.task-list-item-checkbox {
   text-align: center;
 }
 
+.maa-center {
+  text-align: center;
+}
+
 .maa-project-list {
   margin: 0 auto;
   margin-top: 24px;

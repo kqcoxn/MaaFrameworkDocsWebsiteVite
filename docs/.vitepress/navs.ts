@@ -16,7 +16,6 @@ export const zhNav = [
         text: "友情链接",
         items: [
           { text: "MaaAssistantArknights", link: "https://maa.plus" },
-          { text: "MaaAssistantArknights", link: "https://maa.plus" },
         ],
       },
     ],
@@ -40,7 +39,6 @@ export const enNav = [
       {
         text: "Links",
         items: [
-          { text: "MaaAssistantArknights", link: "https://maa.plus" },
           { text: "MaaAssistantArknights", link: "https://maa.plus" },
         ],
       },

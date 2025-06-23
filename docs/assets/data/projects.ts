@@ -1,7 +1,55 @@
 import Logos from "../logos/logos";
 import { Stack } from "../types/Stack";
 
-const projects = [
+export const uis = [
+  {
+    name: "MFAWPF",
+    desc: "基于 MAA 全新架构的 通用 GUI。由 MaaFramework 强力驱动！",
+    logo: Logos.MFAWPF,
+    stack: [Stack.CSharp],
+    link: "https://github.com/SweetSmellFox/MFAWPF",
+  },
+  {
+    name: "MFW-PyQt6",
+    desc: "基于PyQt6的通用GUI。由 MaaFramework 强力驱动！",
+    logo: Logos.MFWPyQt6,
+    stack: [Stack.Python],
+    link: "https://github.com/overflow65537/MFW-PyQt6",
+  },
+  {
+    name: "MFAAvalonia",
+    desc: "基于 Avalonia 的 通用 GUI。由 MaaFramework 强力驱动！",
+    logo: Logos.MFAAvalonia,
+    stack: [Stack.CSharp],
+    link: "https://github.com/SweetSmellFox/MFAAvalonia",
+  },
+];
+
+export const tools = [
+  {
+    name: "MaaDebugger",
+    desc: "MaaFramework Pipeline 调试器",
+    logo: Logos.MaaFW,
+    stack: [Stack.Python],
+    link: "https://github.com/MaaXYZ/MaaDebugger",
+  },
+  {
+    name: "maa-support-extension",
+    desc: "MaaFramework VSCode 插件",
+    logo: Logos.MaaFW,
+    stack: [Stack.TS],
+    link: "https://github.com/neko-para/maa-support-extension",
+  },
+  {
+    name: "MFATools",
+    desc: "基于WPF框架开发的工具界面，旨在提供类似于截图工具的功能",
+    logo: Logos.MaaFW,
+    stack: [Stack.CSharp],
+    link: "https://github.com/SweetSmellFox/MFATools",
+  },
+];
+
+export const apps = [
   {
     name: "M9A",
     desc: "亿韭韭韭 小助手。图像技术 + 模拟控制，解放双手！由 MaaFramework 强力驱动！",
@@ -137,4 +185,4 @@ const projects = [
   },
 ];
 
-export default projects;
+export const projects = [...uis, ...tools, ...apps];

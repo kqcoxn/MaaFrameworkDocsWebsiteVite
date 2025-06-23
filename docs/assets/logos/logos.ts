@@ -15,6 +15,9 @@ import MaaTOT from "./maatot.png";
 import MaaGumballs from "./maagumballs.ico";
 import MMleo from "./mmleo.png";
 import SLIMEIM_Maa from "./slimeim_maa.ico";
+import MFAWPF from "./mfawpf.png";
+import MFWPyQt6 from "./mfwpyqt6.png";
+import MFAAvalonia from "./mfaavalonia.ico";
 
 const Logos = {
   MaaFW,
@@ -34,6 +37,9 @@ const Logos = {
   MaaTOT,
   MMleo,
   SLIMEIM_Maa,
+  MFAWPF,
+  MFWPyQt6,
+  MFAAvalonia,
 };
 
 export default Logos;
