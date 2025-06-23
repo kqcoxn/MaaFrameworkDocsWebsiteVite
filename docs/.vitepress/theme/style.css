@@ -13,6 +13,24 @@
   --vp-home-hero-image-filter: blur(56px);
 }
 
+ul.contains-task-list {
+  padding: 0;
+}
+li.task-list-item {
+  margin-left: 0;
+  list-style: none;
+}
+li.task-list-item > ul {
+  margin-left: 2em;
+}
+input.task-list-item-checkbox {
+  margin: 0;
+  margin-right: 4px;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
 @media (min-width: 960px) {
   .VPHero .image {
     transform: translateX(10%);
@@ -33,14 +51,12 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-
 @media (max-width: 1300px) {
   .maa-project-list {
     width: 90%;
     grid-template-columns: repeat(2, 1fr);
   }
 }
-
 @media (max-width: 934px) {
   .maa-project-list {
     width: 70%;

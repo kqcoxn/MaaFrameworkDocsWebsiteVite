@@ -1,5 +1,7 @@
 // import { defineConfig } from "vitepress";
 import { withMermaid } from "vitepress-plugin-mermaid";
+import taskLists from "markdown-it-task-lists";
+
 import { locales } from "./locales";
 
 const ghPagesRouteBase = "MaaFrameworkDocsWebsiteVite";
@@ -18,4 +20,9 @@ export default withMermaid({
     ],
   },
   mermaid: {},
+  markdown: {
+    config: (md) => {
+      md.use(taskLists, { enabled: false });
+    },
+  },
 });
