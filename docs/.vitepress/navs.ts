@@ -1,24 +1,49 @@
 export const zhNav = [
   { text: "主页", link: "/" },
-  { text: "应用开发", link: "/application/1.1-QuickStarted" },
   {
-    text: "Binding接口",
+    text: "文档",
     items: [
+      { text: "应用开发", link: "/application/1.1-QuickStarted" },
+      { text: "Binding 接口", link: "/binding" },
+      { text: "框架开发", link: "/framework" },
+    ],
+  },
+  {
+    text: "社区",
+    items: [
+      { text: "社区项目", link: "/community/projects" },
       {
-        text: "NodeJS",
-        link: "/binding/NodeJS/J1.1-快速开始",
+        text: "友情链接",
+        items: [
+          { text: "MaaAssistantArknights", link: "https://maa.plus" },
+          { text: "MaaAssistantArknights", link: "https://maa.plus" },
+        ],
       },
     ],
   },
-  { text: "框架开发", link: "/framework/4.1-BuildGuide" },
 ];
 
 export const enNav = [
-  { text: "Home", link: "/en/" },
-  { text: "Application Dev", link: "/en/application/1.1-QuickStarted" },
+  { text: "Home", link: "/en" },
   {
-    text: "Binding Interface",
-    items: [{ text: "NodeJS", link: "/en/binding/NodeJS/J1.1-快速开始" }],
+    text: "Docs",
+    items: [
+      { text: "Application Dev", link: "/en/application/1.1-QuickStarted" },
+      { text: "Binding", link: "/en/binding" },
+      { text: "Framework Dev", link: "/en/framework" },
+    ],
   },
-  { text: "Framework Dev", link: "/en/framework/4.1-BuildGuide" },
+  {
+    text: "Community",
+    items: [
+      { text: "Projects", link: "/community/projects" },
+      {
+        text: "Links",
+        items: [
+          { text: "MaaAssistantArknights", link: "https://maa.plus" },
+          { text: "MaaAssistantArknights", link: "https://maa.plus" },
+        ],
+      },
+    ],
+  },
 ];
