@@ -15,7 +15,7 @@ export const zhNav = [
       {
         text: "友情链接",
         items: [
-          { text: "MaaAssistantArknightsaa", link: "https://maa.plus" },
+          { text: "MaaAssistantArknights", link: "https://maa.plus" },
           { text: "MaaAssistantArknights", link: "https://maa.plus" },
         ],
       },
