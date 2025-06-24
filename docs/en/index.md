@@ -10,6 +10,9 @@ hero:
       text: Quick Start
       link: /en/application/1.1-QuickStarted
     - theme: alt
+      text: Community Project
+      link: /en/community/projects
+    - theme: alt
       text: GitHub
       link: https://github.com/MaaXYZ/MaaFramework
   image:

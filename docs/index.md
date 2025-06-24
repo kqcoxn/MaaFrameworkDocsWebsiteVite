@@ -16,6 +16,9 @@ hero:
       text: 快速开始
       link: /application/1.1-QuickStarted
     - theme: alt
+      text: 社区项目
+      link: /community/projects
+    - theme: alt
       text: GitHub
       link: https://github.com/MaaXYZ/MaaFramework
 

@@ -15,6 +15,10 @@ export default withMermaid({
   locales,
   themeConfig: {
     logo: "/maafw.png",
+    search: {
+      provider: "local",
+    },
+    outline: { level: [2, 3] },
     socialLinks: [
       { icon: "github", link: "https://github.com/MaaXYZ/MaaFramework" },
     ],
