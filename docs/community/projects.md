@@ -11,7 +11,7 @@ aside: false
   import { uis, tools, apps } from "../assets/data/projects";
 </script>
 
-<h1 class="maa-center">社区项目</h1>
+<h1 class="maa-center" style="margin-top: 50px">社区项目</h1>
 
 ## 通用 UI
 

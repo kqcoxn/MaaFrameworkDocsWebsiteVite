@@ -10,7 +10,7 @@
 - 接口情况：
   - [x] 全功能可用
   - [x] 提供 sample
-  - [ ] CI 单元测试
+  - [x] CI 单元测试
   - [ ] 标准化接口
   - [ ] 协议解析封装
 - [接口源码](https://github.com/MaaXYZ/MaaFramework/tree/main/include) | [下载地址](https://github.com/MaaXYZ/MaaFramework/releases) | [集成示例](https://github.com/MaaXYZ/MaaFramework/blob/main/sample/cpp) | [单元测试](https://github.com/MaaXYZ/MaaFramework/tree/main/test)

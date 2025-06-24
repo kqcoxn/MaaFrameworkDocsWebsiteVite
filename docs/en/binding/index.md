@@ -1,20 +1,84 @@
-# Binding 接口一览
+# Bindings
 
 > [!NOTE]
 > 社区开发者们为 MaaFramework 贡献了多种语言的接口，你可以使用自己熟悉的语言与 MaaFramework 进行集成。
 
-| 语言       |                                                                                    |                                                                       |                                                                                           |                                                                                        |                                             |
-| ---------- | ---------------------------------------------------------------------------------- | --------------------------------------------------------------------- | ----------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------- | ------------------------------------------- |
-| **C++**    | [接口源码](https://github.com/MaaXYZ/MaaFramework/tree/main/include)               | [下载地址](https://github.com/MaaXYZ/MaaFramework/releases)           | [集成示例](https://github.com/MaaXYZ/MaaFramework/blob/main/sample/cpp)                   | [单元测试](https://github.com/MaaXYZ/MaaFramework/tree/main/test)                      |
-| **Python** | [接口源码](https://github.com/MaaXYZ/MaaFramework/tree/main/source/binding/Python) | [下载地址](https://pypi.org/project/MaaFw/)                           | [集成示例](https://github.com/MaaXYZ/MaaFramework/tree/main/sample/python)                | [单元测试](https://github.com/MaaXYZ/MaaFramework/tree/main/test/python)               |
-| **Golang** | [接口源码](https://github.com/MaaXYZ/maa-framework-go)                             | [下载地址](https://github.com/MaaXYZ/maa-framework-go)                | [集成示例](https://github.com/MaaXYZ/maa-framework-go/tree/main/examples)                 | [单元测试](https://github.com/MaaXYZ/maa-framework-go/tree/main/test)                  |
-| **NodeJS** | [接口源码](../binding/NodeJS/J1.1-快速开始)                                        | [下载地址](https://npmjs.com/@maaxyz/maa-node)                        | [集成示例](https://github.com/MaaXYZ/MaaFramework/tree/main/sample/nodejs)                | [单元测试](https://github.com/MaaXYZ/MaaFramework/tree/main/test/nodejs)               | [参考文档](../binding/NodeJS/J1.1-快速开始) |
-| **Java**   | [仓库地址](https://github.com/hanhuoer/maa-framework-java)                         | [下载地址](https://central.sonatype.com/namespace/io.github.hanhuoer) | [集成示例](https://github.com/hanhuoer/maa-framework-java/blob/main/maa-sample/README.md) | [单元测试](https://github.com/hanhuoer/maa-framework-java/blob/main/maa-core/src/test) |
+## Support Languages
 
-## TODO
+::: details C++
 
-各接口状态
+- Interface Status:
+  - [x] Full functionality available
+  - [x] Sample provided
+  - [x] Unit Testing via CI
+  - [ ] Standardized interface
+  - [ ] Protocol parsing encapsulation
+- [Source](https://github.com/MaaXYZ/MaaFramework/tree/main/include) | [Download](https://github.com/MaaXYZ/MaaFramework/releases) | [Sample](https://github.com/MaaXYZ/MaaFramework/blob/main/sample/cpp) | [Unit Testing](https://github.com/MaaXYZ/MaaFramework/tree/main/test)
 
-## 还有更多
+:::
 
-各语言支持离不开协作者的贡献！若您也想为 MaaFramework 新增某一门语言的接口，请参考 [标准化接口设计](../framework/4.2-StandardizedInterfaceDesign.md)，并向我们提出 PR！
+::: details Python
+
+- Interface Status:
+  - [x] Full functionality available
+  - [x] Sample provided
+  - [x] Unit Testing via CI
+  - [x] Standardized interface
+  - [x] Protocol parsing encapsulation
+- [Source](https://github.com/MaaXYZ/MaaFramework/tree/main/source/binding/Python) | [Download](https://pypi.org/project/MaaFw/) | [Sample](https://github.com/MaaXYZ/MaaFramework/tree/main/sample/python) | [Unit Testing](https://github.com/MaaXYZ/MaaFramework/tree/main/test/python)
+
+:::
+
+::: details Golang
+
+- Interface Status:
+  - [x] Full functionality available
+  - [x] Sample provided
+  - [x] Unit Testing via CI
+  - [x] Standardized interface
+  - [ ] Protocol parsing encapsulation
+- [Repository](https://github.com/MaaXYZ/maa-framework-go) | [Sample](https://github.com/MaaXYZ/maa-framework-go/tree/main/examples) | [Unit Testing](https://github.com/MaaXYZ/maa-framework-go/tree/main/test)
+
+:::
+
+::: details NodeJS
+
+- Interface Status:
+  - [x] Full functionality available
+  - [x] Sample provided
+  - [x] Unit Testing via CI
+  - [x] Standardized interface
+  - [x] Protocol parsing encapsulation
+- [Source](../../source/binding/NodeJS) | [Document](./NodeJS/J1.1-QuickStarted.md) | [Download](https://npmjs.com/@maaxyz/maa-node) | [Sample](https://github.com/MaaXYZ/MaaFramework/tree/main/sample/nodejs) | [Unit Testing](https://github.com/MaaXYZ/MaaFramework/tree/main/test/nodejs)
+
+:::
+
+::: details Java
+
+- Interface Status:
+  - [x] Full functionality available
+  - [x] Sample provided
+  - [x] Unit Testing via CI
+  - [x] Standardized interface
+  - [ ] Protocol parsing encapsulation
+- [Repository](https://github.com/hanhuoer/maa-framework-java) | [Download](https://central.sonatype.com/namespace/io.github.hanhuoer) | [Sample](https://github.com/hanhuoer/maa-framework-java/blob/main/maa-sample/README.md) | [Unit Testing](https://github.com/hanhuoer/maa-framework-java/blob/main/maa-core/src/test)
+
+:::
+
+::: details CSharp
+
+- Interface Status：
+  - [x] Full functionality available
+  - [x] Sample provided
+  - [x] Unit Testing via CI
+  - [x] Standardized interface
+    - Callback Packaging: NotificationCallback is wrapped as a event named Callback, others are wrapped as interfaces.
+  - [ ] Protocol parsing encapsulation
+    - Partially supported via the Binding.Extensions library
+- [Repository](https://github.com/MaaXYZ/MaaFramework.Binding.CSharp) | [Download](https://www.nuget.org/packages/Maa.Framework) | [Sample](https://github.com/MaaXYZ/MaaFramework.Binding.CSharp/tree/main/sample) | [Unit Testing](https://github.com/MaaXYZ/MaaFramework.Binding.CSharp/tree/main/src/MaaFramework.Binding.UnitTests)
+
+:::
+
+## And More
+
+Language support is inseparable from the contributions of collaborators! If you also want to add an interface of a certain language to MaaFramework, please refer to [Standardized Interface Design](../4.2-StandardizedInterfaceDesign.md) and submit a PR to us!

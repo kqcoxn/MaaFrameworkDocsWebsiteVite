@@ -3,7 +3,9 @@ layout: home
 
 hero:
   name: MaaFramework
-  text: 基于图像识别的自动化黑盒测试框架
+  text: |
+    基于图像识别的
+    自动化黑盒测试框架
   tagline: 助力开发者轻松编写出更好的黑盒测试程序
   image:
     src: /maafw.png

@@ -26,3 +26,16 @@ features:
     details: Support custom recognition and action modules through Agent Server, seamlessly integrate your own business logic.
     icon: 🔧
 ---
+
+<h2 class="maa-title">Community Project</h2>
+
+<section class="maa-project-list">
+
+  <script setup>
+    import Project from "../components/Project.vue"
+    import { projects } from "../assets/data/projects.ts"
+  </script>
+
+  <Project v-for="project in projects" :title="project.name" :desc="project.enDesc" :logo="project.logo" :stack="project.stack" :link="project.link" />
+
+</section>

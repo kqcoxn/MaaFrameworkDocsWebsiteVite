@@ -35,7 +35,7 @@ export const enNav = [
   {
     text: "Community",
     items: [
-      { text: "Projects", link: "/community/projects" },
+      { text: "Projects", link: "/en/community/projects" },
       {
         text: "Links",
         items: [
