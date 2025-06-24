@@ -49,7 +49,7 @@
   - [x] Unit Testing via CI
   - [x] Standardized interface
   - [x] Protocol parsing encapsulation
-- [Source](../../source/binding/NodeJS) | [Document](./NodeJS/J1.1-QuickStarted.md) | [Download](https://npmjs.com/@maaxyz/maa-node) | [Sample](https://github.com/MaaXYZ/MaaFramework/tree/main/sample/nodejs) | [Unit Testing](https://github.com/MaaXYZ/MaaFramework/tree/main/test/nodejs)
+- [Source](../binding/NodeJS/J1.1-快速开始.md) | [Document](../binding/NodeJS/J1.1-快速开始.md) | [Download](https://npmjs.com/@maaxyz/maa-node) | [Sample](https://github.com/MaaXYZ/MaaFramework/tree/main/sample/nodejs) | [Unit Testing](https://github.com/MaaXYZ/MaaFramework/tree/main/test/nodejs)
 
 :::
 
@@ -81,4 +81,4 @@
 
 ## And More
 
-Language support is inseparable from the contributions of collaborators! If you also want to add an interface of a certain language to MaaFramework, please refer to [Standardized Interface Design](../4.2-StandardizedInterfaceDesign.md) and submit a PR to us!
+Language support is inseparable from the contributions of collaborators! If you also want to add an interface of a certain language to MaaFramework, please refer to [Standardized Interface Design](../framework/4.2-StandardizedInterfaceDesign.md) and submit a PR to us!
