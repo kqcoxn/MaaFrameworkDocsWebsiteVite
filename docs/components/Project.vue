@@ -278,7 +278,7 @@
 </style>
 
 <template>
-  <div class="project">
+  <div class="project" @click="Router.open(link, false)">
     <a class="alink" :href="link"></a>
     <div class="head">
       <div class="logo">
@@ -301,7 +301,7 @@
       </div>
     </div>
     <div class="desc">{{ desc }}</div>
-    <div class="link" @click="Router.open(link, false)">
+    <div class="link">
       <img :src="icons.Share" />
     </div>
     <div class="phone" style="display: none">
