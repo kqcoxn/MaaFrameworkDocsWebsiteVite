@@ -1,5 +1,7 @@
 import { zhNav, enNav } from "./navs";
-import { zhSidebar, enSidebar } from "./sidebars";
+import { getLocaleSidebars } from "./sidebars";
+
+const sidebars = getLocaleSidebars();
 
 export const locales = {
   root: {
@@ -7,7 +9,7 @@ export const locales = {
     lang: "zh-cn",
     themeConfig: {
       nav: zhNav,
-      sidebar: zhSidebar,
+      sidebar: sidebars.zh,
     },
   },
   en: {
@@ -16,7 +18,7 @@ export const locales = {
     link: "/en/",
     themeConfig: {
       nav: enNav,
-      sidebar: enSidebar,
+      sidebar: sidebars.en,
     },
   },
 };

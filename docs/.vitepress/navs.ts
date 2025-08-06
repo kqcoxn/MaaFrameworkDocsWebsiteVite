@@ -2,19 +2,8 @@ export const zhNav = [
   { text: "主页", link: "/" },
   {
     text: "文档",
-    items: [
-      {
-        text: "应用开发",
-        link: "/application/1.1-QuickStarted",
-        activeMatch: "/application/",
-      },
-      { text: "Binding 接口", link: "/binding", activeMatch: "/binding/" },
-      {
-        text: "框架开发",
-        link: "/framework/4.1-BuildGuide",
-        activeMatch: "/framework/",
-      },
-    ],
+    activeMatch: "/maafw/",
+    link: "/maafw/1.1-快速开始",
   },
   {
     text: "社区",
@@ -33,19 +22,8 @@ export const enNav = [
   { text: "Home", link: "/en" },
   {
     text: "Docs",
-    items: [
-      {
-        text: "Application Dev",
-        link: "/en/application/1.1-QuickStarted",
-        activeMatch: "/en/application/",
-      },
-      { text: "Binding", link: "/en/binding", activeMatch: "/en/binding/" },
-      {
-        text: "Framework Dev",
-        link: "/en/framework/4.1-BuildGuide",
-        activeMatch: "/en/framework/",
-      },
-    ],
+    activeMatch: "/en/maafw/",
+    link: "/en/maafw/1.1-QuickStarted",
   },
   {
     text: "Community",

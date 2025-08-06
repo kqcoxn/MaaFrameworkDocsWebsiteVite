@@ -14,7 +14,7 @@ hero:
   actions:
     - theme: brand
       text: 快速开始
-      link: /application/1.1-QuickStarted
+      link: /maafw/1.1-快速开始
     - theme: alt
       text: 社区项目
       link: /community/projects

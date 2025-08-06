@@ -1,3 +1,40 @@
+import { generateSidebar } from "vitepress-sidebar";
+import { VitePressSidebarOptions } from "vitepress-sidebar/types";
+
+export function genSidebar(args: VitePressSidebarOptions = {}) {
+  return generateSidebar({
+    documentRootPath: "/docs",
+    ...args,
+  });
+}
+
+function processRoutes(routes) {
+  routes.forEach((route) => {
+    if (route["items"]) {
+      processRoutes(route["items"]);
+    }
+    let texts = route["text"].split("-");
+    if (texts.length > 1) {
+      route["text"] = texts[1].trim();
+    }
+  });
+}
+
+export function getLocaleSidebars() {
+  let zn_routes = genSidebar({ scanStartPath: "/maafw" });
+  let en_routes = genSidebar({ scanStartPath: "/en/maafw" });
+  processRoutes(zn_routes);
+  processRoutes(en_routes);
+  console.log(en_routes);
+  return {
+    zh: zn_routes,
+    en: en_routes,
+  };
+}
+
+console.log("------------------");
+getLocaleSidebars();
+
 export const zhSidebar = [
   {
     text: "应用开发",
