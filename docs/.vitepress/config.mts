@@ -13,8 +13,8 @@ export default withMermaid({
   lang: "zh-cn",
   head: [["link", { rel: "icon", href: `/${ghPagesRouteBase}/maafw.png` }]],
   base: `/${ghPagesRouteBase}/`,
-  locales,
   rewrites: sidebars.rewrites,
+  locales,
   themeConfig: {
     logo: "/maafw.png",
     search: {

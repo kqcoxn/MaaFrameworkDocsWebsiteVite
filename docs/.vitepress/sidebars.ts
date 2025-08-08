@@ -8,27 +8,20 @@ export function genSidebar(args: VitePressSidebarOptions = {}) {
   });
 }
 
-function processRewritesRecursion(routes, originLang: string, targetLang = "") {
+function processRewritesRecursion(routes, targetKV) {
   const rewrites = {};
-  routes.forEach((route) => {
-    let link = route.link;
-
-    if (!route.link) {
-      const recursionRewrites = processRewritesRecursion(
-        route.items,
-        originLang,
-        targetLang
-      );
-      Object.assign(rewrites, recursionRewrites);
+  routes.forEach((route, index) => {
+    let link = route.link as string;
+    let text = route.text as string;
+    if (route.items) {
+      const rw = processRewritesRecursion(route.items, targetKV);
+      Object.assign(rewrites, rw);
       return;
     }
-
-    if (link.startsWith(`${originLang}/maafw/`)) {
-      link = link.substring(originLang.length + 1);
-    }
-
-    rewrites[`${targetLang}${targetLang == "" ? "" : "/"}${link}`] =
-      "/" + targetLang;
+    const splitLink = link.split("/");
+    const kv = text.split("-");
+    splitLink[splitLink.length - 1] = kv[0] + "-" + targetKV[kv[0]] + ".md";
+    rewrites[link + ".md"] = splitLink.join("/");
   });
   return rewrites;
 }
@@ -45,30 +38,36 @@ function processRoutes(routes) {
   });
 }
 
+function getFileNameKV(routes: Array<any>) {
+  const kv = {};
+  routes.forEach((route) => {
+    if (route.items) {
+      Object.assign(kv, getFileNameKV(route.items));
+      return;
+    }
+    const splitText = route.text.split("-");
+    kv[splitText[0]] = splitText[1];
+  });
+  return kv;
+}
+
 function getLocaleSidebars() {
   // 生成侧边栏
-  let zn_routes = genSidebar({ scanStartPath: "/maafw" });
-  let en_routes = genSidebar({ scanStartPath: "/en/maafw" });
-  const routesList = [
-    [zn_routes, ""],
-    [en_routes, "en"],
-  ];
+  let zn_routes = genSidebar({ scanStartPath: "/maafw" }) as Array<any>;
+  let en_routes = genSidebar({ scanStartPath: "/en/maafw" }) as Array<any>;
 
-  // 生成国际化跳转路径
+  // 生成国际化路径重写
+  const rewriteList = [zn_routes];
   const rewrites = {};
-  const langs = ["", "en"];
-  routesList.forEach((routes) => {
-    const [routeData, lang] = routes;
-    langs.forEach((sourceLang) => {
-      langs.forEach((targetLang) => {
-        if (lang == targetLang || sourceLang == targetLang) return;
-        const rw = processRewritesRecursion(routeData, sourceLang, targetLang);
-        Object.assign(rewrites, rw);
-      });
-    });
+  rewriteList.forEach((item) => {
+    const rw = processRewritesRecursion(item, getFileNameKV(en_routes));
+    Object.assign(rewrites, rw);
   });
+
+  // 更改路由名称
   processRoutes(zn_routes);
   processRoutes(en_routes);
+
   return {
     zh: zn_routes,
     en: en_routes,
