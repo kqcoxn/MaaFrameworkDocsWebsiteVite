@@ -8,6 +8,31 @@ export function genSidebar(args: VitePressSidebarOptions = {}) {
   });
 }
 
+function processRewritesRecursion(routes, originLang: string, targetLang = "") {
+  const rewrites = {};
+  routes.forEach((route) => {
+    let link = route.link;
+
+    if (!route.link) {
+      const recursionRewrites = processRewritesRecursion(
+        route.items,
+        originLang,
+        targetLang
+      );
+      Object.assign(rewrites, recursionRewrites);
+      return;
+    }
+
+    if (link.startsWith(`${originLang}/maafw/`)) {
+      link = link.substring(originLang.length + 1);
+    }
+
+    rewrites[`${targetLang}${targetLang == "" ? "" : "/"}${link}`] =
+      "/" + targetLang;
+  });
+  return rewrites;
+}
+
 function processRoutes(routes) {
   routes.forEach((route) => {
     if (route["items"]) {
@@ -20,20 +45,38 @@ function processRoutes(routes) {
   });
 }
 
-export function getLocaleSidebars() {
+function getLocaleSidebars() {
+  // 生成侧边栏
   let zn_routes = genSidebar({ scanStartPath: "/maafw" });
   let en_routes = genSidebar({ scanStartPath: "/en/maafw" });
+  const routesList = [
+    [zn_routes, ""],
+    [en_routes, "en"],
+  ];
+
+  // 生成国际化跳转路径
+  const rewrites = {};
+  const langs = ["", "en"];
+  routesList.forEach((routes) => {
+    const [routeData, lang] = routes;
+    langs.forEach((sourceLang) => {
+      langs.forEach((targetLang) => {
+        if (lang == targetLang || sourceLang == targetLang) return;
+        const rw = processRewritesRecursion(routeData, sourceLang, targetLang);
+        Object.assign(rewrites, rw);
+      });
+    });
+  });
   processRoutes(zn_routes);
   processRoutes(en_routes);
-  console.log(en_routes);
   return {
     zh: zn_routes,
     en: en_routes,
+    rewrites,
   };
 }
 
-console.log("------------------");
-getLocaleSidebars();
+export const sidebars = getLocaleSidebars();
 
 export const zhSidebar = [
   {

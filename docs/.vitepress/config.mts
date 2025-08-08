@@ -3,6 +3,7 @@ import { withMermaid } from "vitepress-plugin-mermaid";
 import taskLists from "markdown-it-task-lists";
 
 import { locales } from "./locales";
+import { sidebars } from "./sidebars";
 
 const ghPagesRouteBase = "MaaFrameworkDocsWebsiteVite";
 
@@ -13,6 +14,7 @@ export default withMermaid({
   head: [["link", { rel: "icon", href: `/${ghPagesRouteBase}/maafw.png` }]],
   base: `/${ghPagesRouteBase}/`,
   locales,
+  rewrites: sidebars.rewrites,
   themeConfig: {
     logo: "/maafw.png",
     search: {

@@ -1,7 +1,5 @@
 import { zhNav, enNav } from "./navs";
-import { getLocaleSidebars } from "./sidebars";
-
-const sidebars = getLocaleSidebars();
+import { sidebars } from "./sidebars";
 
 export const locales = {
   root: {
