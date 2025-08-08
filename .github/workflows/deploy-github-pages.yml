@@ -35,7 +35,6 @@ jobs:
         run: |
           cd docs
           cp -r ../raw/docs/zh_cn/* maafw && cp -r ../raw/docs/en_us/* en/maafw
-          ls maafw
 
       - name: Setup Node
         uses: actions/setup-node@v4
