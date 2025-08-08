@@ -11,8 +11,8 @@ export default withMermaid({
   title: "MaaFramework",
   description: "基于图像识别的自动化黑盒测试框架",
   lang: "zh-cn",
-  head: [["link", { rel: "icon", href: `/${ghPagesRouteBase}/maafw.png` }]],
-  base: `/${ghPagesRouteBase}/`,
+  head: [["link", { rel: "icon", href: `/maafw.png` }]],
+  base: `/`,
   rewrites: sidebars.rewrites,
   locales,
   themeConfig: {
