@@ -12,7 +12,7 @@ export default withMermaid({
   description: "基于图像识别的自动化黑盒测试框架",
   lang: "zh-cn",
   head: [["link", { rel: "icon", href: `/maafw.png` }]],
-  base: `/`,
+  base: `/${ghPagesRouteBase}/`, //TODO: 调整 base
   rewrites: sidebars.rewrites,
   locales,
   themeConfig: {
