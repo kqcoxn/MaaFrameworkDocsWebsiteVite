@@ -2,6 +2,8 @@
 
 maafw 文档站 vitepress 架构试水
 
+已合并至[maafw文档站仓库](https://github.com/MaaXYZ/MaaFrameworkDocsWebsite)
+
 ## 开发
 
 1. clone 此项目至本地
