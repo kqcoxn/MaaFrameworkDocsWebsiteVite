@@ -13,15 +13,20 @@ function processRewritesRecursion(routes, targetKV) {
   routes.forEach((route, index) => {
     let link = route.link as string;
     let text = route.text as string;
+    // 递归
     if (route.items) {
       const rw = processRewritesRecursion(route.items, targetKV);
       Object.assign(rewrites, rw);
       return;
     }
+    // 重写路径
     const splitLink = link.split("/");
     const kv = text.split("-");
-    splitLink[splitLink.length - 1] = kv[0] + "-" + targetKV[kv[0]] + ".md";
-    rewrites[link + ".md"] = splitLink.join("/");
+    splitLink[splitLink.length - 1] = kv[0] + "-" + targetKV[kv[0]];
+    const newLink = splitLink.join("/");
+    rewrites[link + ".md"] = newLink + ".md";
+    // 更改路径
+    route.link = newLink;
   });
   return rewrites;
 }

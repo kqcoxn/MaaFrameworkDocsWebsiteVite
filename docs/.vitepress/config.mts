@@ -4,6 +4,7 @@ import taskLists from "markdown-it-task-lists";
 
 import { locales } from "./locales";
 import { sidebars } from "./sidebars";
+console.log(sidebars);
 
 const ghPagesRouteBase = "MaaFrameworkDocsWebsiteVite";
 
