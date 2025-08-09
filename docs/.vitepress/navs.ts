@@ -3,7 +3,7 @@ export const zhNav = [
   {
     text: "文档",
     activeMatch: "/maafw/",
-    link: "/maafw/1.1-快速开始",
+    link: "/maafw/1.1-QuickStarted",
   },
   {
     text: "社区",
