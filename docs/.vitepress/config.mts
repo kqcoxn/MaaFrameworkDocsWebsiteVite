@@ -4,7 +4,6 @@ import taskLists from "markdown-it-task-lists";
 
 import { locales } from "./locales";
 import { sidebars } from "./sidebars";
-console.log(sidebars);
 
 const ghPagesRouteBase = "MaaFrameworkDocsWebsiteVite";
 
@@ -13,7 +12,7 @@ export default withMermaid({
   description: "基于图像识别的自动化黑盒测试框架",
   lang: "zh-cn",
   head: [["link", { rel: "icon", href: `/maafw.png` }]],
-  base: `/${ghPagesRouteBase}/`, //TODO: 调整 base
+  base: `/`,
   rewrites: sidebars.rewrites,
   locales,
   themeConfig: {
